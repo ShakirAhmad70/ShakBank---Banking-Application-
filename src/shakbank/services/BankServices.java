@@ -180,7 +180,7 @@ public final class BankServices {
                     user.setBalance(user.getBalance() + amount);
                     animateAndPrintln("Amount transferred successfully!", 300);
                 } else {
-                    animateAndPrintln("Account not found!", 300);
+                    animateAndPrintln("The account you want to transfer money to is not found!", 300);
                 }
                 return;
             }
@@ -191,7 +191,7 @@ public final class BankServices {
                     user.setBalance(user.getBalance() + amount);
                     animateAndPrintln("Amount transferred successfully!", 300);
                 } else {
-                    animateAndPrintln("Account not found!", 300);
+                    animateAndPrintln("The account you want to transfer money to is not found!", 300);
                 }
                 return;
             }
@@ -249,6 +249,7 @@ public final class BankServices {
     public static void changeAddress(int index) {
         print("What is your new address?\n" +
                 "Village: ");
+        GetInput.nextLine();
         String village = GetInput.nextLine();
         print("City: ");
         String city = GetInput.nextLine();
