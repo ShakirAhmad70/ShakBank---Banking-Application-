@@ -37,7 +37,7 @@ public class ShakBankApp {
 
 
                     animateAndPrintln("Hello " + BankServices.users.get(index).getAccountHolderName() + " !", 500);
-                    menu();
+                    userMenu();
                     print("Enter your choice: ");
                     int choice = GetInput.nextInt();
                     while(true) {
@@ -114,7 +114,7 @@ public class ShakBankApp {
                             default -> animateAndPrintln("Invalid choice. Please try again.", 100);
                         }
                         if (exit) break;
-                        menu();
+                        userMenu();
                         print("Enter your choice: ");
                         choice = GetInput.nextInt();
                     }
@@ -147,7 +147,7 @@ public class ShakBankApp {
         animateAndPrintln(" # # # # # # #", 100);
     }
 
-    private static void menu() {
+    private static void userMenu() {
         println("\nWhat would you like to do?");
         println("\t0. Show the details of your account");
         println("\t1. Deposit");
